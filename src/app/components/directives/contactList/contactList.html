@@ -1,0 +1,344 @@
+
+<!-- SEARCH -->
+  <div class="container-fluid ContactList__search-container">
+    <div class="row">
+      <div class="col-md-5">
+        <input ng-model="vm.searchText" placeholder="Not working quite yet..." />
+      </div>
+      <div class="col-md-2">
+        <button ng-click="search(vm.searchText)">Search</button>
+      </div>
+    </div>
+  </div>
+<!-- GRID -->
+  <div class="container-fluid">
+    <div class="ContactList__grid" ui-grid="vm.gridOptions" ui-grid-expandable class="grid"></div>
+  </div>
+
+<!-- OLD GRID -->
+<!--  <div class="container-fluid">
+    <div class="row">
+      <div class="master">
+
+            <div id="tab" class="btn-group tab-nav" data-toggle="buttons-radio">
+              <a href="#transactions" class="btn btn-default btn-nav active" data-toggle="tab">Transactions</a>
+              <a href="#properties" class="btn btn-default btn-nav" data-toggle="tab">Properties</a>
+              <a href="#accounts" class="btn btn-default btn-nav" data-toggle="tab">Accounts</a>
+              <a href="#contacts" class="btn btn-default btn-nav"  data-toggle="tab">Contacts</a>
+              <div class="btn-group">
+                <button type="button" class="btn btn-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Quick Add <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#quickadd-contact" data-toggle="tab">Contact</a></li>
+                  <li><a href="#quickadd-account" data-toggle="tab">Account</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#quickadd-property" data-toggle="tab">Property</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="transactions">
+                <div class="table-nav">
+                  <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control list-search" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search fa-sm"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="nav navbar-nav filter-bar">
+                      <li class="active"><a href="#">Open <span>(10)</span></a></li>
+                      <li><a href="#">Closed <span>(8)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+
+                   <table id="masterTable" class="table table-hover">
+
+                      <thead>
+                          <tr>
+                              <th>Transaction Type</th>
+                              <th>Address</th>
+                              <th>Details</th>
+                              <th>Status</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-toggle="collapse" data-target="#detail1" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>4535 Greenway Avenue - Suite 600</td>
+                            <td>210,000 Sq. Ft. | $2,100,000</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail1" >
+                                  <div class="row metrics">
+                                    <div class="col-sm-2">
+                                      <small>Metrics</small><br />
+                                      <strong>20%</strong>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      <small>Metrics</small><br />
+                                      <strong>20%</strong>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      <small>Metrics</small><br />
+                                      <strong>20%</strong>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      <small>Metrics</small><br />
+                                      <strong>20%</strong>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      <small>Metrics</small><br />
+                                      <strong>20%</strong>
+                                    </div>
+                                    <div class="col-sm-2">
+                                      <small>Metrics</small><br />
+                                      <strong>20%</strong>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-sm-3">
+                                      action
+                                    </div>
+                                    <div class="col-sm-3">
+                                      action
+                                    </div>
+                                    <div class="col-sm-3">
+                                      action
+                                    </div>
+                                    <div class="col-sm-3">
+                                      action
+                                    </div>
+
+                                  </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail2" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail2" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail3" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail3" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail4" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail4" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail5" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail5" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail6" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail6" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail7" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail7" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail8" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail8" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail9" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail9" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail10" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail10" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#detail11" data-parent="#masterTable">
+                            <td><span class="label label-warning">Lease</span></td>
+                            <td>Donna R. Folse</td>
+                            <td>2012/05/06</td>
+                            <td><span class="label label-success">Active</span></td>
+                        </tr>
+                        <tr class="hiddenRow">
+                            <td colspan="5">
+                                <div class="collapse out" id="detail11" >
+                                detail
+                                </div>
+                            </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+              </div>
+              <div class="tab-pane" id="properties">
+                <div class="table-nav">
+                  <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control list-search" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search fa-sm"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="nav navbar-nav filter-bar">
+                      <li class="active"><a href="#">Under Contract <span>(10)</span></a></li>
+                      <li><a href="#">Pending <span>(8)</span></a></li>
+                      <li><a href="#">New <span>(5)</span></a></li>
+                      <li><a href="#">Lease <span>(23)</span></a></li>
+                      <li><a href="#">Sale <span>(15)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+                  properties
+
+              </div>
+              <div class="tab-pane" id="accounts">
+                <div class="table-nav">
+                  <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control list-search" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search fa-sm"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="nav navbar-nav filter-bar">
+                      <li class="active"><a href="#">Active Accounts <span>(10)</span></a></li>
+                      <li><a href="#">Inactive Accounts <span>(8)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+                  accounts
+              </div>
+              <div class="tab-pane" id="contacts">
+                <div class="table-nav">
+                  <div class="col-sm-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control list-search" placeholder="Search" name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search fa-sm"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="nav navbar-nav filter-bar">
+                      <li class="active"><a href="#">Active Prospects <span>(10)</span></a></li>
+                    </ul>
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+                  contacts
+              </div>
+              <div class="tab-pane" id="quickadd-contact">
+                  quickadd contact
+              </div>
+              <div class="tab-pane" id="quickadd-account">
+                  quickadd account
+              </div>
+              <div class="tab-pane" id="quickadd-property">
+                  quickadd property
+              </div>
+            </div>
+
+
+      </div>
+
+    </div>
+  </div>
+-->

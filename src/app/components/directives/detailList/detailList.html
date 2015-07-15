@@ -1,0 +1,14 @@
+<div>
+  <form class="ContactList__form">
+    <div class="form-group row">
+      <div ng-repeat="(key, val) in vm.contact" class="col-md-4">
+        <label ng-if="key != 'Id'" for="">{{ key }}
+          <input type="text" class="form-control" ng-model="val" placeholder="{{ key }}">
+        </label>
+      </div>
+      <br />
+
+      <button type="submit" ng-click="updateContact()" class="btn btn-default col-md-1 col-md-offset-10">Submit</button>
+    </div>
+  </form>
+</div>

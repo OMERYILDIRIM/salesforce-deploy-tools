@@ -1,0 +1,18 @@
+<div class="main-form">
+    <form ng-submit="vm.onSubmit()">
+        <formly-form model="vm.user" fields="vm.userFields">
+            <button type="submit">Submit</button>
+        </formly-form>
+    </form>
+</div>
+
+<!-- actual content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="greetings">
+        <h1>Good morning, Rina.</h1>
+        <h4>You have <a href="#">5</a> Open transactions. <small>(these can be "hyperlink filters" for the master table below)</h4>
+        <h4>There are <a href="#">10</a> documents out for signing.</h4>
+      </div>
+    </div>
+  </div>

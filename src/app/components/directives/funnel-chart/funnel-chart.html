@@ -1,0 +1,30 @@
+<div class="main-form">
+    <form ng-submit="vm.onSubmit()">
+        <formly-form model="vm.user" fields="vm.userFields">
+            <button type="submit">Submit</button>
+        </formly-form>
+    </form>
+</div>
+
+  <div class="container-fluid">
+    <div class="row" data-toggle="collapse" data-target="#funnelChart">
+      <header class="funnelChart">
+          <div class="col-xs-2">0%</div>
+          <div class="col-xs-2">20%</div>
+          <div class="col-xs-2">40%</div>
+          <div class="col-xs-2">60%</div>
+          <div class="col-xs-2">80%</div>
+          <div class="col-xs-2">100%</div>
+      </header>
+    </div>
+    <div class="row collapse" id="funnelChart">
+      <div class="funnelChart">
+          <div class="col-xs-2">0%</div>
+          <div class="col-xs-2">20%</div>
+          <div class="col-xs-2">40%</div>
+          <div class="col-xs-2">60%</div>
+          <div class="col-xs-2">80%</div>
+          <div class="col-xs-2">100%</div>
+      </div>
+    </div>
+  </div>

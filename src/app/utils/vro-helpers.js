@@ -1,0 +1,1 @@
+export var checkLimit = limit => (isUndef(limit) || limit > 100) ? 100 : limit;

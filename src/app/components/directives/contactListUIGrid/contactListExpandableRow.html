@@ -1,0 +1,11 @@
+<div>
+  <form>
+    <div ng-repeat="(key, val) in data" class="form-group">
+      <label for="">{{ key }}
+        <input type="text" class="form-control" ng-model="val" placeholder="{{ key }}">
+      </label>
+    </div>
+
+    <button type="submit" ng-click="updateContact(data)" class="btn btn-default">Submit</button>
+  </form>
+</div>
